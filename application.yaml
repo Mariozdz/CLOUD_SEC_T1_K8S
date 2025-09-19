@@ -1,12 +1,12 @@
-apiVersion: argoproject.io/v1alpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-Application
+  name: myapp-argo-application
   namespace: argocd
 spec:
   project: default
   source:
-    repotURL: https://github.com/Mariozdz/CLOUD_SEC_T1_K8S.git
+    repoURL: https://github.com/Mariozdz/CLOUD_SEC_T1_K8S.git
     targetRevision: HEAD
     path: Dev
   destination:
@@ -16,6 +16,6 @@ spec:
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
-  automated:
-    selfHeal: true
-    prune: true
+    automated:
+      selfHeal: true
+      prune: true
